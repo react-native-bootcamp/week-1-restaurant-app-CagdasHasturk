@@ -5,7 +5,7 @@ import {
   View, 
   Text, 
   FlatList, 
-  StyleSheet, 
+  StyleSheet,
   Dimensions 
 } from 'react-native'
 
