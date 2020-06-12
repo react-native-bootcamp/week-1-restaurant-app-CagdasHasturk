@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* ImageListAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ImageListAppTests.m */; };
 		47966B1DECBC4DF004895EE0 /* libPods-ImageListApp-ImageListAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 865A08197382C500D305B492 /* libPods-ImageListApp-ImageListAppTests.a */; };
 		50D0303F48855EA77EAD302E /* libPods-ImageListApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8176C47726018E79FD6550D /* libPods-ImageListApp-tvOS.a */; };
+		76005DA7248FBA57001894E6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 76005DA6248FBA56001894E6 /* Fonts */; };
 		C15D40E61ABE0DD8E4C48E15 /* libPods-ImageListApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3095E179A423BCF12562DA07 /* libPods-ImageListApp-tvOSTests.a */; };
 		F9AFF0EC2747DFDD3F0A5F9B /* libPods-ImageListApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F9A2E054867CA73C1A6FA2 /* libPods-ImageListApp.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		51F9A2E054867CA73C1A6FA2 /* libPods-ImageListApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageListApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58923929B596A4362E43F578 /* Pods-ImageListApp-ImageListAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageListApp-ImageListAppTests.release.xcconfig"; path = "Target Support Files/Pods-ImageListApp-ImageListAppTests/Pods-ImageListApp-ImageListAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B69D99B1206976BA8CF3FB2 /* Pods-ImageListApp-ImageListAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageListApp-ImageListAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageListApp-ImageListAppTests/Pods-ImageListApp-ImageListAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76005DA6248FBA56001894E6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		82671170C388AC26A4D703BA /* Pods-ImageListApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageListApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ImageListApp-tvOS/Pods-ImageListApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		865A08197382C500D305B492 /* libPods-ImageListApp-ImageListAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageListApp-ImageListAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BA0BE1BABD7326D60A4A00 /* Pods-ImageListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageListApp.release.xcconfig"; path = "Target Support Files/Pods-ImageListApp/Pods-ImageListApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 				026651DEE02E51933C272F2A /* Pods-ImageListApp-tvOSTests.debug.xcconfig */,
 				18A7A78E9FEDE9CDBFD227A6 /* Pods-ImageListApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,12 +176,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				76005DA6248FBA56001894E6 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* ImageListApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ImageListAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1A47D9CDAF367153D554CF45 /* Pods */,
+				FE7726079049476B98B7CF48 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,6 +199,13 @@
 				2D02E4901E0B4A5D006451C7 /* ImageListApp-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FE7726079049476B98B7CF48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76005DA7248FBA57001894E6 /* Fonts in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

@@ -1,32 +1,44 @@
 import React from 'react'
-import { View, ImageBackground, Text, Dimensions, StyleSheet, Platform } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-
+import { 
+  View, 
+  ImageBackground, 
+  Text, 
+  Dimensions, 
+  StyleSheet
+} from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const windowHeight = Dimensions.get('window').height;
 
 const ListItem = (props) => {
     return (
         <View style={styles.container}>
-            <ImageBackground source={{ uri: props.data.image }} style={styles.styleImage}>
-                <View style={styles.styleTextContainer}>
-                    <View>
-                        <Text style={[styles.styleText, { fontSize: 18 }]}>{props.data.name}
-                            <Icon
-                                name="ios-back"
-                                color="#ccc"
-                                size={30}
-                            />
-                        </Text>
-                        <Text style={styles.styleText}>{props.data.location}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.styleText}>{props.data.likes}</Text>
-                    </View>
-                </View>
+          <ImageBackground 
+            source={{ uri: props.data.image }} 
+            style={styles.styledImage}
+          >
+            <View style={styles.textLeftContainer}>
+              <View>
+                <Text style={[styles.styledText, { fontSize: 18 }]}>
+                  {props.data.name}
+                  {props.data.isOpenNow &&  
+                    <Icon name="fire" color="red" size={20}/>
+                  }
+                </Text>
+                <Text style={styles.styledText}>
+                      {props.data.location}
+                </Text>
+              </View>
 
-            </ImageBackground >
+              <View style={styles.textRightContainer}>
+                <Icon name="heart" color="red" size={20}/>
+                <Text style={styles.styledText}>
+                  {props.data.likes}
+                </Text>
+              </View>
 
+            </View>
+          </ImageBackground >
         </View>
     );
 }
@@ -35,34 +47,35 @@ export default ListItem;
 
 const styles = StyleSheet.create({
     container: {
-        height: windowHeight / 4,
-        marginBottom: 50,
+        height: windowHeight / 3.5,
+        marginBottom: 25,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 1,
+            height: 2,
         },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-        elevation: 24,
-
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 4,
     },
-    styleImage: {
+    styledImage: {
         flex: 1,
         resizeMode: "cover",
         justifyContent: "flex-end",
-
     },
-    styleTextContainer: {
+    textLeftContainer: {
         backgroundColor: '#00000080',
-        padding: 10,
+        padding: 8,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
     },
-    styleText: {
+    textRightContainer: {
+      flexDirection:"row"
+    },
+    styledText: {
         fontSize: 14,
         color: '#fff',
-        marginBottom: 5,
+        marginBottom:5,
     }
 });
